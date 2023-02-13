@@ -161,7 +161,7 @@ split
 		vars.offsetCount++;
 		return settings["off"];
 	}
-	if (current.level == 2 && !vars.CompletedLevels.Contains(old.level))
+	if ((current.level == 1 || current.level == 2) && !vars.CompletedLevels.Contains(old.level) && settings["lvl-"+old.level])
 	{
 		return settings["lvl-"+old.level] && vars.CompletedLevels.Add(old.level);
 	}
