@@ -110,7 +110,7 @@ startup
 	//settings.Add("lvl-45", false, "Vivian's House");
 	//settings.Add("lvl-98", false, "Tower Base");
 	//settings.Add("lvl-43", false, "Hearth Inn");
-	//settings.Add("lvl-75", false, "Bonnie's Portal");
+	settings.Add("lvl-75", false, "Bonnie's Portal");
 	settings.Add("lvl-51", false, "Blindgaze's Temple");
 	//settings.Add("lvl-53", false, "Bridge");
 
