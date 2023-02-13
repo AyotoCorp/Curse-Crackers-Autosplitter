@@ -102,16 +102,16 @@ startup
 	settings.Add("lvl-49", false, "Belle's House");
 	settings.Add("lvl-99", true, "The Cactus");
 	settings.Add("lvl-44", false, "Grevenfel");
-	//settings.Add("lvl-81", false, "The Relic Ruins");
+	settings.Add("lvl-81", false, "The Relic Room");
 	//settings.Add("lvl-46", false, "Elinore's Wagon");
 	//settings.Add("lvl-48", false, "Oathblade's Rest");
 	//settings.Add("lvl-100", false, "Maggie's Schoolhouse");
 	//settings.Add("lvl-47", false, "Campground");
 	//settings.Add("lvl-45", false, "Vivian's House");
 	//settings.Add("lvl-98", false, "Tower Base");
-	//settings.Add("lvl-43", false, "Hearth inn");
+	//settings.Add("lvl-43", false, "Hearth Inn");
 	//settings.Add("lvl-75", false, "Bonnie's Portal");
-	//settings.Add("lvl-51", false, "Blindgaze's Temple");
+	settings.Add("lvl-51", false, "Blindgaze's Temple");
 	//settings.Add("lvl-53", false, "Bridge");
 
 	settings.CurrentDefaultParent = "dia";
