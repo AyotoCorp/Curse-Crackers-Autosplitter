@@ -16,6 +16,7 @@ state("Curse Crackers Belle")
 
 startup
 {
+	settings.Add("off", false, "Offset Test");
 	settings.Add("car", true, "Carnival");
 	settings.Add("rui", true, "Ruins");
 	settings.Add("swa", true, "Swamp");
@@ -127,12 +128,8 @@ startup
 	
 	vars.CompletedLevels = new HashSet<int>();
 	vars.CompletedDialogue = new HashSet<string>();
+	int offsetCount = 0;
 }
-
-//init
-//{
-//	int split;
-//}
 
 start
 {
@@ -154,10 +151,16 @@ onStart
 {
 	vars.CompletedLevels.Clear();
 	vars.CompletedDialogue.Clear();
+	vars.offsetCount = 0;
 }
 
 split
 {
+	if (vars.offsetCount == 0  && (current.menu == 1 || current.menu == 0))
+	{
+		vars.offsetCount++;
+		return settings["off"];
+	}
 	if (current.level == 2 && !vars.CompletedLevels.Contains(old.level))
 	{
 		return settings["lvl-"+old.level] && vars.CompletedLevels.Add(old.level);
