@@ -29,7 +29,7 @@ startup
 	settings.Add("oth", true, "Other");
 	settings.Add("dia", true, "Dialogue");
 	settings.Add("dia-1-33", false, "Arcade Mode");
-	settings.Add("bon", false, "Bonnievania");
+	settings.Add("bon", false, "Bonniemania");
 	settings.Add("off", false, "Offset Test");
 	
 	settings.CurrentDefaultParent = "car";
@@ -121,12 +121,15 @@ startup
 	settings.Add("dia-1-24", true, "Defeat Bonnie");
 	settings.Add("dia-4-87", true, "Defeat Leer");
 	settings.Add("dia-66-39", true, "Defeat Leadra");
+	//settings.Add("dia-66-123",true, "Post-Leadra Final Split");
 	
 	settings.CurrentDefaultParent = "bon";
-	settings.Add("dia-16-16", true, "Bonnievania Start");
-	settings.Add("dia-0-92", true, "Slam Recovery");
-	settings.Add("dia-2-15", true, "Boss Fight");
-	settings.Add("dia-2-80", true, "Bonnievania End");
+	settings.Add("dia-16-16", true, "Bonniemania Start");
+	settings.Add("dia-2-50", true, "Defeat Leer");
+	settings.Add("dia-1-9", true, "Defeat Duke");
+	settings.Add("dia-65-79", false, "Wren Chase");
+	settings.Add("dia-2-80", true, "Find Chime");
+	settings.Add("dia-2-38", true, "Bonniemania End");
 	
 	vars.CompletedLevels = new HashSet<int>();
 	vars.CompletedDialogue = new HashSet<string>();
@@ -135,7 +138,7 @@ startup
 
 start
 {
-	if (old.menu == 3 && (current.menu == 1 || current.menu == 0) && !settings["dia-16-16"] && !settings["dia-1-33"])
+	if ((old.menu == 3 || old.menu == 11) && (current.menu == 1 || current.menu == 0) && !settings["dia-16-16"] && !settings["dia-1-33"])
 	{
 		return true;
 		//Normal Start
@@ -143,7 +146,7 @@ start
 	if (settings["dia-16-16"] && current.music == 56)
 	{
 		return true;
-		//Bonnievania Start
+		//Bonniemania Start
 	}
 	if (settings["dia-1-33"] && current.level == 3)
 	{
