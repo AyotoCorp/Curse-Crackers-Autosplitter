@@ -1,6 +1,6 @@
 state("Curse Crackers Belle")
 {
-	int text : "mono-2.0-bdwgc.dll", 0x00565C58, 0x140, 0x38, 0xC, 0x824, 0x9C;
+	int text : "UnityPlayer.dll", 0x0147DAC0, 0x44, 0xC8, 0x1B4, 0x0, 0x20, 0x54;
 	int level : "mono-2.0-bdwgc.dll", 0x0056108C, 0x48, 0xF9C;
 	int menu : "mono-2.0-bdwgc.dll", 0x00561050, 0xE0, 0xEC8;
 	int rose : "UnityPlayer.dll", 0x014E39D0, 0x108, 0x384, 0x18, 0x18, 0xF6C;
@@ -127,7 +127,7 @@ startup
 	settings.Add("dia-16-16", true, "Bonniemania Start");
 	settings.Add("dia-2-50", true, "Defeat Leer");
 	settings.Add("dia-1-9", true, "Defeat Duke");
-	settings.Add("dia-65-79", false, "Wren Chase");
+	//settings.Add("dia-65-79", false, "Wren Chase");
 	settings.Add("dia-2-80", true, "Find Chime");
 	settings.Add("dia-2-38", true, "Bonniemania End");
 	
